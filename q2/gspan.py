@@ -72,7 +72,7 @@ def execute_algorithm(executable, output_path, algorithm_name, result_dict):
 
 def plot_results(output_path, gaston_runtimes, gspan_runtimes, fsg_runtimes):
     """Generates and saves the runtime comparison plot."""
-    min_sups = [5, 10, 25, 50, 95]
+    min_sups = [95, 50, 25, 10, 5]
 
     gaston_values = [gaston_runtimes.get(ms, 0) * 100 for ms in min_sups]
     gspan_values = [gspan_runtimes.get(ms, 0) * 100 for ms in min_sups]
