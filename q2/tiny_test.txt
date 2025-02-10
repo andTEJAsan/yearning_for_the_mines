@@ -1,0 +1,12 @@
+t # 0
+v 0 A
+v 1 B
+e 0 1 X
+
+t # 1
+v 0 A
+v 1 B
+v 2 C
+e 0 1 X
+e 1 2 Y
+
