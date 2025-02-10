@@ -146,4 +146,5 @@ if __name__ == "__main__":
         print("FSG Runtimes:", dict(fsg_runtimes))
         print("--------------------------------\n")
 
+
         plot_results(output_path, gaston_runtimes, gspan_runtimes, fsg_runtimes)
