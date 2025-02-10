@@ -1,17 +1,6 @@
-
-usage: gSpan -f file [-n file] [-s minsup] [-m min_length] [-o] [-d] [-v lower_bound] [-t thread ] [-a] [-x] [-i]
-
-  -f file, input data file
-options
-  -n file, input negative data file for significant pattern
-  -p file, input patterns discovered before
-  -s minsup, set the minimum support (absolute value)
-  -w input graphs have weight
-  -a leap search [0, 1)
-  -r minimum relevance [0, 1)
-  -x maximum number of subgraph isomorphisms
-  -v value of lower bound
-  -o output discovered patterns
-  -d output with dfs code format
-  -i output graph ids
-  -t number of threads
+scanning outdir/converted_dataset.txt with 1 graphs
+scanning done
+-------------------System Performance------------------
+			0.00199sec
+		5  Discovered SubGraphs
+---------------------------End-------------------------
