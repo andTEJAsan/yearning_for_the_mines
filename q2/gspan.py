@@ -52,8 +52,8 @@ def run_algorithm(executable, min_sup, output_path, result_dict, algorithm_name)
 
 def execute_algorithm(executable, output_path, algorithm_name, result_dict):
     """Runs Gaston, gSpan, or FSG in parallel for different min_support values using a shared dictionary."""
-    min_sups = [5, 10, 25, 50, 95]
-    num_cores = max(1, multiprocessing.cpu_count() // 2)  # Limit CPU usage
+    min_sups = [95, 50, 25, 10, 5]
+    num_cores = max(1, multiprocessing.cpu_count())  # Limit CPU usage
 
     processes = []
 
