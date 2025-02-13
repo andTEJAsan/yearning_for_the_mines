@@ -24,5 +24,7 @@ echo "  Output Path: $OUTPUT_PATH"
 # Run the Python script
 python3 gspan.py "$GSPAN_EXEC" "$FSG_EXEC" "$GASTON_EXEC" "$DATASET_PATH" "$OUTPUT_PATH"
 
+rm -rf "$OUTPUT_PATH/data_*"
+
 # Print completion message
 echo "gspan.py execution completed."

@@ -57,15 +57,15 @@ def run_algorithm(executable, output_path):
             if min_sup == MIN_SUPS[0]:
                 converted_dataset = os.path.join(output_path, f"data_{algorithm_name}")
             else:
-                converted_dataset = os.path.join(output_path, f"{algorithm_name}{prev_min_sup}")
+                converted_dataset = os.path.join(output_path, f"data_{algorithm_name}{prev_min_sup}")
         
-            os.rename(converted_dataset, os.path.join(output_path, f"{algorithm_name}{min_sup}"))
+            os.rename(converted_dataset, os.path.join(output_path, f"data_{algorithm_name}{min_sup}"))
         
-            converted_dataset = os.path.join(output_path, f"{algorithm_name}{min_sup}")
+            converted_dataset = os.path.join(output_path, f"data_{algorithm_name}{min_sup}")
             output_file = os.path.join(output_path, f"{algorithm_name.lower()}{min_sup}_stdout")
             
             if algorithm_name == "gaston":
-                command = [executable[algorithm_name], str(ceil(641.09*min_sup)), converted_dataset, f"{algorithm_name}{min_sup}"]
+                command = [executable[algorithm_name], str(ceil(641.09*min_sup)), converted_dataset, os.path.join(output_path, f"{algorithm_name}{min_sup}")]
             elif algorithm_name == "gspan":
                 command = [executable[algorithm_name], "-f", converted_dataset, "-s", str(min_sup/100), "-o"]
             elif algorithm_name == "fsg":
