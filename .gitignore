@@ -7,3 +7,4 @@ fsg/
 manual.pdf
 manual.ps
 openai-chatgpt-latest.vsix
+**/__pycache__/**
