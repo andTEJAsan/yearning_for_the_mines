@@ -22,9 +22,14 @@ echo "  Dataset Path: $DATASET_PATH"
 echo "  Output Path: $OUTPUT_PATH"
 
 # Run the Python script
-python3 gspan.py "$GSPAN_EXEC" "$FSG_EXEC" "$GASTON_EXEC" "$DATASET_PATH" "$OUTPUT_PATH"
+# python3 gspan.py "$GSPAN_EXEC" "$FSG_EXEC" "$GASTON_EXEC" "$DATASET_PATH" "$OUTPUT_PATH"
 
 rm -rf "$OUTPUT_PATH/data_*"
+
+# for all the files of the form *.fp, change the extension to .txt
+for file in "$OUTPUT_PATH"/*.fp; do
+    mv -- "$file" "${file%.fp}"
+done
 
 # Print completion message
 echo "gspan.py execution completed."
